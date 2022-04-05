@@ -8,10 +8,10 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         Validate validator = new Validate();
 
-        System.out.println("Enter First Name: ");
+        System.out.println("Enter Last Name: ");
         String name = scan.nextLine();
 
-        if(validator.isValidFirstName(name)){
+        if(validator.isValidLastName(name)){
             System.out.println("Valid");
         }
         else{
