@@ -5,7 +5,7 @@ public class Regexes {
     String validateFirstName = "^[A-Z]\\w{2,12}$";
     String validateEmail = "^[\\w+_-]+(?:\\.[\\w+_-]+)*[@][\\w]{1,}([.]{1}[a-z]{2,}){1,2}$";
     String validatePhone = "^(91)\\s\\d{10}";
-    String validatePassword;
+    String validatePassword = ".{8,}";
     String validateLastName = "^[A-Z]\\w{2,11}$";
     private Regexes(){}
 

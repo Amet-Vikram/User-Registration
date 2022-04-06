@@ -8,10 +8,10 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         Validate validator = new Validate();
 
-        System.out.print("Enter Phone Number: ");
-        String number = scan.nextLine();
+        System.out.print("Enter Password: ");
+        String password = scan.nextLine();
 
-        if(validator.isValidPhone(number)){
+        if(validator.isValidPassword(password)){
             System.out.println("Valid");
         }
         else{

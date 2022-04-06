@@ -33,4 +33,11 @@ public class Validate {
         return Pattern.matches(regex.validatePhone, str);
     }
 
+    public boolean isValidPassword(String str){
+        if (str == null) {
+            return false;
+        }
+        return Pattern.matches(regex.validatePassword, str);
+    }
+
 }
