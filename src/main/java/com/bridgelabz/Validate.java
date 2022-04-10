@@ -3,7 +3,7 @@ package com.bridgelabz;
 import java.util.regex.*;
 
 public class Validate {
-    static Regexes regex = Regexes.getInstance();
+    private static final Regexes regex = Regexes.getInstance();
 
     public boolean isValidFirstName(String str) {
         if (str == null) {

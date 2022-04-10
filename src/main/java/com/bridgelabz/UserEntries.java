@@ -1,14 +1,27 @@
 package com.bridgelabz;
 
+import java.util.regex.Pattern;
+
+@FunctionalInterface
+interface ValidateUserEntry {
+    boolean validate(String userInput);
+}
+
 public class UserEntries {
 
+    public boolean validateLambda(String pattern, String entry) {
+        ValidateUserEntry isValid = userInput -> Pattern.compile(pattern).matcher(userInput).matches();
+        return isValid.validate(entry);
+    }
+
+
     boolean verifyFirstName(String entry) throws InvalidEntryExceptions{
-        Validate validate = new Validate();
-        if(!validate.isValidFirstName(entry)){
+        Regexes regex = Regexes.getInstance();
+        if(!validateLambda(regex.validateFirstName,entry)){
             throw new InvalidEntryExceptions(InvalidEntryExceptions.ExceptionType.INVALID_NAME,"Invalid Name");
         }
         else {
-            return validate.isValidFirstName(entry);
+            return true;
         }
     }
 
@@ -51,5 +64,4 @@ public class UserEntries {
             throw new InvalidEntryExceptions(InvalidEntryExceptions.ExceptionType.INVALID_PASSWORD,"Invalid Password");
         }
     }
-
 }
