@@ -5,7 +5,7 @@ import java.util.regex.*;
 public class Validate {
     static Regexes regex = Regexes.getInstance();
 
-    public boolean isValidFirstName(String str){
+    public boolean isValidFirstName(String str) {
         if (str == null) {
             return false;
         }
@@ -39,5 +39,6 @@ public class Validate {
         }
         return Pattern.matches(regex.validatePassword, str);
     }
+
 
 }
